@@ -1,20 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import BaseRouter from './routes';
 // JS files
 import Layout from './containers/Layout'
-import PostList from './containers/PostListView'
-import TeamList from './containers/TeamListView'
 // React Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
-  return (
-    <div className="App">
-      <Layout>
-        <TeamList />
-        <PostList />
-      </Layout>
-    </div>
-  );
-}
+    return (
+      <div className="App">
+        <Router>
+          <Layout>
+              <BaseRouter />
+          </Layout>
+        </Router>
+      </div>
+    );
+  }
 
 export default App;

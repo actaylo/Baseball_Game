@@ -1,7 +1,10 @@
 import React from 'react';
 import { ListGroup, Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom'
 
 const Teams = (props) => {
+  console.log(props.data)
   if (props.data.length === 0){
     return (
       <div>
@@ -11,7 +14,6 @@ const Teams = (props) => {
   }
 
   const renderTeamList = () => {
-    console.log(props.data)
     let teams = [];
     props.data.FantasyBaseballNerd.Team.map((team, id) => {
       teams.push(
@@ -20,8 +22,7 @@ const Teams = (props) => {
             <Row>
               <Col>
                   <ListGroup>
-                   <ListGroup.Item><a href="#teamdetail">{team.name._text}</a></ListGroup.Item>
-                   <ListGroup.Item>{team.league._text} League {team.division._text}</ListGroup.Item>
+                   <ListGroup.Item><Link to={`/${team.code._text}`}>{team.name._text}</Link></ListGroup.Item>
                   </ListGroup>
               </Col>
               <Col></Col>
@@ -32,7 +33,6 @@ const Teams = (props) => {
           </Container>
         </div>
         )
-        console.log(id)
     })
     return teams
   }

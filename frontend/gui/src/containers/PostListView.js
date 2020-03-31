@@ -1,16 +1,19 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Posts from '../components/Posts'
-import axios from 'axios'
+import axios from 'axios';
 
-class PostList extends React.Component {
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Posts from '../components/Posts';
+import PostForm from '../components/PostForm';
+
+class PostListView extends React.Component {
 
   state = {
     posts: []
   }
 
   componentDidMount(){
-    axios.get('http://127.0.0.1:8000/api/post/')
+    axios.get('http://127.0.0.1:8000/api/')
       .then(res => {
         this.setState({
           posts: res.data
@@ -22,9 +25,11 @@ class PostList extends React.Component {
     return(
       <div>
         <Posts data={this.state.posts} />
+        <h3>Create Post</h3>
+        <PostForm requestType='POST' btnText='Create' />
       </div>
     )
   }
 }
 
-export default PostList
+export default PostListView

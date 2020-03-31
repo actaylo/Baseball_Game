@@ -1,11 +1,11 @@
 import React from 'react';
 import axios from 'axios';
+
 import Teams from '../components/Teams';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 const convert = require("xml-js");
 
-
-class TeamList extends React.Component {
+class TeamsView extends React.Component {
 
     state = {
       teams: []
@@ -31,5 +31,5 @@ class TeamList extends React.Component {
     }
   }
   
-  export default TeamList
+  export default TeamsView
   
