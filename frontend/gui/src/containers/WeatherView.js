@@ -51,7 +51,7 @@ class WeatherView extends React.Component {
           <h6>Low Temperature: {this.state.todayLow}</h6>
           <h6>High Temperature: {this.state.todayHigh}</h6>
           <h6>Forecast: {this.state.forecast}</h6>
-          <h6>Located at: {this.state.latitude} | {this.state.longitude}</h6>
+          <h6>Located at:</h6>
         <div style={{ height: '500px'}}>
 
           {

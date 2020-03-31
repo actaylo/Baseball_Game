@@ -55,11 +55,6 @@ render() {
             <Card.Text as="h6">{this.state.post.body}</Card.Text>
             <Card.Text as="small">{this.state.post.date_posted}</Card.Text>
           </Card.Body>
-          <ButtonGroup className="mb-2">
-            <Button variant="primary">Reply</Button>
-            <Button variant="primary">Update</Button>
-            <Button variant="primary">Delete</Button>
-          </ButtonGroup>
         </Card>
       </div>
       <h3>Update Post</h3>

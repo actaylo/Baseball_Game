@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom'
 
 const Teams = (props) => {
-  console.log(props.data)
   if (props.data.length === 0){
     return (
       <div>

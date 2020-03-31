@@ -3,23 +3,9 @@ import axios from 'axios';
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react'
 const convert = require("xml-js");
 
-
-// function TeamMap() {
-//   return (
-//     <GoogleMap />
-//   )
-// }
-
-// export default function TeamMap() {
-//   return <div>
-//     Map Goes Here:
-//   </div>
-// }
 class TeamMap extends React.Component {
 
   render() {
-
-    console.log(this.props)
     
     const teamCordinates = {
       lat: this.props.latitude,
@@ -42,7 +28,6 @@ class TeamMap extends React.Component {
     return(
       <div>
         <div className='TeamMap'>
-          <h1>Map Goes Here:</h1>
               <Map 
               google={this.props.google}
               zoom={15}
@@ -60,6 +45,6 @@ class TeamMap extends React.Component {
 
 export default GoogleApiWrapper({
 
-  apiKey: ('AIzaSyA94k-xJ_1YiGVQ1uvIaluBECLnKCZ_3JI')
+  apiKey: ('API KEY')
 
  })(TeamMap);
