@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import PostListView from '../containers/PostListView';
 import WeatherView from '../containers/WeatherView';
+import DepthChart from './DepthCharts'
+import InjuryReport from './InjuryReport';
 
 const convert = require("xml-js");
 
@@ -53,6 +55,8 @@ class TeamDetails extends React.Component {
       <div>
         <h1>{this.state.team.name._text}</h1>
         <h3>{this.state.team.league._text} League {this.state.team.division._text}</h3>
+        <InjuryReport teamCode={this.state.teamCode} />
+        {/* <DepthChart teamCode={this.state.teamCode} /> */}
         <WeatherView teamCode={this.state.teamCode}/>
         <PostListView teamCode={this.state.teamCode}/>
       </div>

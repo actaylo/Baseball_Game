@@ -22,7 +22,7 @@ class WeatherView extends React.Component {
           const data = JSON.parse(
             convert.xml2json(res.data, { compact: true, ignoreAttributes: false, ignoreDeclaration: true, ignoreComment: true, alwaysArray: false })
           )
-           let weatherArr = data['FantasyBaseballNerd']['Team']
+          let weatherArr = data['FantasyBaseballNerd']['Team']
           return this.findTeam(weatherArr, teamCode)
         })
     }
