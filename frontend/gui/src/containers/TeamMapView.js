@@ -45,7 +45,7 @@ class TeamMap extends React.Component {
 
 export default GoogleApiWrapper({
 
-  // HIDE KEY
-  apiKey: ('API KEY')
+
+  apiKey: ('AIzaSyCwjYLF3sq8LlshHRDpuhBWnApdOs-HCfs')
 
  })(TeamMap);
