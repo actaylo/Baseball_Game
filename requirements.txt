@@ -16,7 +16,7 @@ django-bootstrap4==1.1.1
 django-cors-headers==3.2.1
 django-crispy-forms==1.9.0
 django-heroku==0.3.1
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 entrypoints==0.3
 Faker==4.0.0
 green==3.1.0
